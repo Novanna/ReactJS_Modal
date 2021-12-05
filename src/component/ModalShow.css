@@ -1,0 +1,58 @@
+.cardName {
+    width: 600px;
+    margin-left: 15%;
+    height: 350px;
+    background:linear-gradient(to bottom, #101c3e, #34496a);
+    border-style: hidden;
+    border-radius: 10px;
+}
+
+.textName {
+    font-size: 33px;
+    width: max-content;
+    font-weight: 700;
+    font-family:'Segoe UI';
+    color: whitesmoke;
+    padding-left: 20px;
+    margin-top: -5px;
+}
+
+table {
+    width: 75%;
+    table-layout: fixed;
+}
+
+table tr td {
+    background-color:transparent;
+}
+
+.textJob {
+    font-size: 20px;
+    text-align: left;
+    width: 100%;
+    font-weight: 700;
+    font-family:'Segoe UI';
+    padding-left: 20px;
+    margin-top: -60px;
+    color: rgb(255, 234, 148);
+}
+
+.textDom {
+    font-size: 18px;
+    text-align: left;
+    font-weight: 400;
+    font-family:'Segoe UI';
+    color: whitesmoke;
+    margin-left: 20px;
+    width: 100%;
+}
+
+.textSoc {
+    font-size: 18px;
+    text-align: left;
+    width: max-content;
+    font-family:'Segoe UI';
+    color: whitesmoke;
+    margin-left: 20px;
+    margin-top: 10px;
+}

@@ -1,0 +1,14 @@
+.head-style{
+    width: 100%;
+    height: 80px;
+    color: rgb(255, 255, 255);
+    background:linear-gradient(to bottom, #101c3e, #34496a);
+    margin-top: -30px;
+}
+
+.title-page{
+    font-size: 30px;
+    padding: 20px;
+    font-style: oblique;
+    font-family: 'Trebuchet MS';
+}

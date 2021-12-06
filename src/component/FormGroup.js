@@ -66,15 +66,15 @@ function FormGroup() {
     }
 
   return (
-    <div className="card">
+    <div className='card'>
       <form> 
           {formElements.map(formElement =>{
               return <div>
-                  <div className="form-label">
+                  <div className='form-label'>
                     {formElement.label}
                   </div>
                   <input 
-                   className="form-input"
+                   className='form-input'
                    value={formData[formElement.key]}
                    placeholder={formElement.ph}
                    onChange={(e) =>{
@@ -100,7 +100,7 @@ function FormGroup() {
                    setModalIsOpenToTrue() }}
           >Process</button>
 
-          <>
+          <div>
             <Modal
             isOpen={modalIsOpen}
             style={modalStyle}
@@ -124,7 +124,7 @@ function FormGroup() {
                     userEmail = {formData["uemail"]}
                 />
             </Modal>
-          </>
+          </div>
 
       </form>
     </div>

@@ -21,6 +21,7 @@ function ModalShow(props){
                             borderRadius: 10
                         }}
                         src={props.userPhoto} 
+                        alt="ava"
                     />
                     </td>
                </tr>
@@ -33,7 +34,7 @@ function ModalShow(props){
                </tr>
                <tr>
                    <td>
-                        <p class="textJob">
+                        <p className="textJob">
                             {props.userJob}
                         </p>
                         <div className="textDom">

@@ -3,7 +3,6 @@ import ModalShow from './ModalShow';
 import Modal from 'react-modal';
 import './FormGroup.css';
 
-
 let formElements = [{
     label : "Name",
     ph: "Type your full name here",
@@ -28,17 +27,17 @@ let formElements = [{
     label : "Email",
     ph: "youremail@bla.com",
     key: "uemail"
-}
-]
+}]
 
 function FormGroup() {
+    //form type
     const [formData, setFormData] = useState({});
 
     const handleChange = (value, key) => {
         setFormData({...formData, ...{ [key]: value }});
     }
 
-    //
+    //img
     const [selectedImg, setSelectedImg] = useState("");
 
     const addImgHandler = (e) => {
@@ -51,6 +50,7 @@ function FormGroup() {
 
     const setModalIsOpenToTrue =()=> {
         setModalIsOpen(true)
+        console.log(formData);
     }
 
     const setModalIsOpenToFalse =()=> {
@@ -70,7 +70,7 @@ function FormGroup() {
       <form> 
           {formElements.map(formElement =>{
               return <div>
-                  <div class="form-label">
+                  <div className="form-label">
                     {formElement.label}
                   </div>
                   <input 
@@ -85,7 +85,7 @@ function FormGroup() {
               </div>
           })}
 
-          <p class="form-label">
+          <p className="form-label">
               Photo
           </p>
           <input 
@@ -114,15 +114,15 @@ function FormGroup() {
             >
                 close
             </button>
-            <ModalShow 
-                userName = {formData["uname"]}
-                userJob = {formData["ujob"]}
-                userDom = {formData["udom"]}
-                userPhoto = {selectedImg}
-                userPhone = {formData["uphone"]}
-                userGit = {formData["ugit"]}
-                userEmail = {formData["uemail"]}
-            />
+                <ModalShow 
+                    userName = {formData["uname"]}
+                    userJob = {formData["ujob"]}
+                    userDom = {formData["udom"]}
+                    userPhoto = {selectedImg}
+                    userPhone = {formData["uphone"]}
+                    userGit = {formData["ugit"]}
+                    userEmail = {formData["uemail"]}
+                />
             </Modal>
           </>
 

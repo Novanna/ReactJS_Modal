@@ -1,6 +1,6 @@
 # Preview
-<img src="ReactJS-Form-Modal.png"></img>
-<img src="ReactJS-Form-Modal1.png"></img>
+<img src="RJSmodal2.PNG"></img>
+<img src="RJSmodal1.PNG"></img>
 
 # Getting Started with Create React App
 

@@ -3,6 +3,7 @@ import ModalShow from './ModalShow';
 import Modal from 'react-modal';
 import './FormGroup.css';
 
+//Form element Object, untuk Map function
 let formElements = [{
     label : "Name",
     ph: "Type your full name here",
@@ -68,6 +69,7 @@ function FormGroup() {
   return (
     <div className='card'>
       <form> 
+          {/* map function */}
           {formElements.map(formElement =>{
               return <div>
                   <div className='form-label'>
@@ -84,7 +86,8 @@ function FormGroup() {
                   />
               </div>
           })}
-
+          
+          {/* input form foto */}
           <p className="form-label">
               Photo
           </p>

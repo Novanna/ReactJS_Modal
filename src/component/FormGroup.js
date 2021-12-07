@@ -71,7 +71,7 @@ function FormGroup() {
       <form> 
           {/* map function */}
           {formElements.map(formElement =>{
-              return <div>
+              return <div key={formElement.key}>
                   <div className='form-label'>
                     {formElement.label}
                   </div>
@@ -117,6 +117,7 @@ function FormGroup() {
             >
                 close
             </button>
+
                 <ModalShow 
                     userName = {formData["uname"]}
                     userJob = {formData["ujob"]}

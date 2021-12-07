@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-import ModalShow from './ModalShow';
+import { ModalShow } from './ModalShow';
 import Modal from 'react-modal';
 import './FormGroup.css';
 
@@ -40,6 +40,9 @@ function FormGroup() {
 
     //img
     const [selectedImg, setSelectedImg] = useState("");
+    // const [selectedImg, setSelectedImg] = useState({}); kenapa gak gitu?
+    // apa bedanya ya useState("") sama ({}) ?
+    // pas dicoba ganti ({}) jadi nambah banyak warning
 
     const addImgHandler = (e) => {
         let src = URL.createObjectURL(e.target.files[0]);
@@ -71,13 +74,15 @@ function FormGroup() {
       <form> 
           {/* map function */}
           {formElements.map(formElement =>{
-              return <div key={formElement.key}>
+            //harus dikasih key= itu biar gak ada warning (key props)
+              return <div key={formElement.key}> 
                   <div className='form-label'>
                     {formElement.label}
                   </div>
                   <input 
                    className='form-input'
-                   value={formData[formElement.key]}
+                   //value={formData[formElement.key]}
+                   //Gak perlu ada value, karena kata arba ini uncontrolled component
                    placeholder={formElement.ph}
                    onChange={(e) =>{
                        //e.preventDefault(); //setelah klik back to default form
@@ -86,7 +91,7 @@ function FormGroup() {
                   />
               </div>
           })}
-          
+
           {/* input form foto */}
           <p className="form-label">
               Photo
@@ -110,14 +115,12 @@ function FormGroup() {
             //className="Modal-style"
             onRequestClose={()=> setModalIsOpen(true)}
             > 
-               
             <button 
                 className="btn-close" 
                 onClick={setModalIsOpenToFalse}
             >
                 close
             </button>
-
                 <ModalShow 
                     userName = {formData["uname"]}
                     userJob = {formData["ujob"]}

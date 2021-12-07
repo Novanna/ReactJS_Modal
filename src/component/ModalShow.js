@@ -7,9 +7,9 @@ import { AiTwotonePhone } from 'react-icons/ai';
 
 function ModalShow(props){
    return(
-       <div>
        <div className="cardName">
            <table className="cardTable">
+               <tbody>
                <tr>
                     <td rowSpan="6">
                     <img
@@ -59,9 +59,9 @@ function ModalShow(props){
                         </div>
                    </td>
                </tr>
+               </tbody>
             </table>
-       </div>
        </div>
    )
 }
-export default ModalShow;
+export { ModalShow };

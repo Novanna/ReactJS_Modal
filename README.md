@@ -1,6 +1,6 @@
 # Preview
-<img src="RJSModal1.PNG"></img>
-<img src="RJSModal2.PNG"></img>
+<img src="RJSmodal2.PNG"></img>
+<img src="RJSmodal1.PNG"></img>
 
 # Getting Started with Create React App
 

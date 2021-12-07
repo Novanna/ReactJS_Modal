@@ -52,6 +52,7 @@ function FormGroup() {
     //modal
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
+    //Const itu Arrow component
     const setModalIsOpenToTrue =()=> {
         setModalIsOpen(true)
         console.log(formData);
@@ -74,8 +75,8 @@ function FormGroup() {
       <form> 
           {/* map function */}
           {formElements.map(formElement =>{
-            //harus dikasih key= itu biar gak ada warning (key props)
               return <div key={formElement.key}> 
+              {/* harus dikasih key= itu biar gak ada warning (key props) */}
                   <div className='form-label'>
                     {formElement.label}
                   </div>
@@ -109,10 +110,12 @@ function FormGroup() {
           >Process</button>
 
           <div>
+            {/* funfact, modal ini kalau dirapihin kasih space, banyak warning >huhu< */}
             <Modal
             isOpen={modalIsOpen}
             style={modalStyle}
-            //className="Modal-style"
+            ariaHideApp={false} // Kalau gak dikasih ada -> Warning: react-modal: App element is not defined.
+            //className="Modal-style" //Kenapa modal gak bisa di styling di css?
             onRequestClose={()=> setModalIsOpen(true)}
             > 
             <button 
@@ -132,7 +135,6 @@ function FormGroup() {
                 />
             </Modal>
           </div>
-
       </form>
     </div>
   );
